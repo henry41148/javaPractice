@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  product-server:
+    image: 'mysql:8.0.34'
+    container_name: product-server
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=123
+      - MYSQL_DATABASE=PhoneFactory
+volumes:
+  db:
+    driver: local
